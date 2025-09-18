@@ -1,6 +1,6 @@
 // seed.js
 const mongoose = require("mongoose");
-const Lead = require("./models/Lead"); // adjust path
+const Lead = require("./models/Lead"); 
 const { faker } = require("@faker-js/faker");
 
 require("dotenv").config();
@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch((err) => console.error(err));
 
 const seedLeads = async () => {
-  await Lead.deleteMany({}); // optional: clear existing leads
+  await Lead.deleteMany({}); 
 
   const leads = [];
   for (let i = 0; i < 100; i++) {
@@ -39,3 +39,4 @@ const seedLeads = async () => {
 };
 
 seedLeads();
+
