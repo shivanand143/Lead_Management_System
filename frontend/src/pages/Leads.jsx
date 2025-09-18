@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 import { AgGridReact } from "ag-grid-react";
 import { AllCommunityModule } from "ag-grid-community";
 import "ag-grid-community/styles/ag-grid.css";
-
+import "ag-grid-community/styles/ag-theme-alpine.css";
 
 export default function Leads() {
   const { user, logout } = useContext(AuthContext);
@@ -93,5 +93,6 @@ export default function Leads() {
     </div>
   );
 }
+
 
 
