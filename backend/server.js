@@ -17,7 +17,7 @@ app.use("/api/leads", leadRoutes);
 
 // Test root route
 app.get("/", (req, res) => {
-  res.json({ message: "Erino Leads API is working 🚀" });
+  res.json({ message: "Erino Leads API is working" });
 });
 
 const PORT = process.env.PORT || 4000;
@@ -26,12 +26,13 @@ const MONGO_URI = process.env.MONGO_URI;
 mongoose
   .connect(MONGO_URI)
   .then(() => {
-    console.log("✅ MongoDB connected");
-    app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+    console.log("MongoDB connected");
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection error:", err.message);
+    console.error("MongoDB connection error:", err.message);
   });
+
 
 
 
