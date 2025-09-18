@@ -52,7 +52,7 @@ export default function Leads() {
               onClick={async () => {
                 if (window.confirm("Delete this lead?")) {
                   await API.delete(`/leads/${params.data._id}`, { withCredentials: true });
-                  fetchLeads(); // refresh after delete
+                  fetchLeads(); 
                 }
               }}
             >
@@ -94,6 +94,7 @@ export default function Leads() {
     </div>
   );
 }
+
 
 
 
