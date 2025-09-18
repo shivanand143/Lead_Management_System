@@ -7,7 +7,7 @@ const auth = require("../middleware/auth");
 
 const router = express.Router();
 
-// Register
+
 router.post("/register", async (req, res) => {
   try {
     const hash = await bcrypt.hash(req.body.password, 10);
@@ -19,7 +19,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Login
+
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
@@ -31,7 +31,7 @@ router.post("/login", async (req, res) => {
       expiresIn: "7d",
     });
 
-    // ✅ Secure cookie config for cross-site (Vercel <-> Render)
+    
     res.cookie("token", token, {
       httpOnly: true,
       secure: true,       // cookie only over HTTPS
@@ -45,7 +45,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Logout
+
 router.post("/logout", (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
@@ -55,7 +55,7 @@ router.post("/logout", (req, res) => {
   res.json({ message: "Logged out successfully" });
 });
 
-// Current user
+
 router.get("/me", auth, (req, res) => {
   if (!req.user) {
     return res.status(401).json({ msg: "Not authenticated" });
@@ -64,3 +64,4 @@ router.get("/me", auth, (req, res) => {
 });
 
 module.exports = router;
+
