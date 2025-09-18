@@ -79,7 +79,7 @@ a:hover {
   display: flex;
   gap: 10px;
 }
-/* Navbar styling */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -114,14 +114,14 @@ a:hover {
   background: rgba(255,255,255,0.2);
 }
 
-/* Main content container */
+
 .main-container {
   padding: 40px;
   background: #f5f6fa;
-  min-height: calc(100vh - 70px); /* navbar height */
+  min-height: calc(100vh - 70px); 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -141,5 +141,6 @@ a:hover {
   height: 600px;
   width: 100%;
 }
+
 
 
