@@ -15,7 +15,7 @@ app.use(cors({ origin: "https://lead-management-system-virid.vercel.app", creden
 app.use("/api/auth", authRoutes);
 app.use("/api/leads", leadRoutes);
 
-// Test root route
+
 app.get("/", (req, res) => {
   res.json({ message: "Erino Leads API is working" });
 });
@@ -32,6 +32,7 @@ mongoose
   .catch((err) => {
     console.error("MongoDB connection error:", err.message);
   });
+
 
 
 
