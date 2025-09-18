@@ -10,7 +10,7 @@ const leadRoutes = require("./routes/leads");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "https://lead-management-system-virid.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://lead-management-system-virid.vercel.app/", credentials: true }));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/leads", leadRoutes);
@@ -32,4 +32,5 @@ mongoose
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err.message);
   });
+
 
