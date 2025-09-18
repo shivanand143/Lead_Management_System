@@ -79,16 +79,19 @@ export default function Leads() {
       </div>
 
       <div className="ag-theme-alpine" style={{ height: 600, width: "100%" }}>
-        <AgGridReact
-          columnDefs={columnDefs}
-          rowData={leads}
-          modules={[AllCommunityModule]}
-          defaultColDef={{ sortable: true, filter: true, resizable: true, flex: 1, minWidth: 120 }}
-          animateRows={true}
-          rowHeight={30}
-        />
+       <div style={{ height: 600, width: "100%" }}>
+  <AgGridReact
+    rowData={leads}
+    columnDefs={columnDefs}
+    theme="ag-theme-quartz"   // ✅ new way
+    defaultColDef={{ flex: 1, minWidth: 120, sortable: true, filter: true }}
+    rowHeight={30}
+  />
+</div>
+
       </div>
     </div>
   );
 }
+
 
