@@ -11,7 +11,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await API.get("/auth/me"); // backend route to return logged-in user
+        const res = await API.get("/auth/me"); 
         setUser(res.data.user);
       } catch (err) {
         setUser(null);
@@ -38,3 +38,4 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+
