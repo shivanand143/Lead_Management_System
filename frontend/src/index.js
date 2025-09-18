@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Leads from "./pages/Leads";
 import LeadForm from "./pages/LeadForm";
-import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
+import { AuthProvider } from "./context/AuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,3 +26,4 @@ root.render(
     </AuthProvider>
   </React.StrictMode>
 );
+
