@@ -7,7 +7,7 @@ export default function LeadsActions({ data, refreshLeads }) {
     if (window.confirm("Delete this lead?")) {
       try {
         await API.delete(`/leads/${data._id}`, { withCredentials: true });
-        refreshLeads(); // Refresh leads after deletion
+        refreshLeads(); 
       } catch (err) {
         console.error(err);
       }
@@ -25,3 +25,4 @@ export default function LeadsActions({ data, refreshLeads }) {
     </div>
   );
 }
+
